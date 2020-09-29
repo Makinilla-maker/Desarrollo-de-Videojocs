@@ -31,8 +31,8 @@ public:
     void Normalize()
     {
         float denom;
-
-        denom = sqrt(x ^ 2 + y ^ 2 + z ^ 2);
+        int a = x*x + y*y + z*z;
+        denom = sqrt(a);
         std::cout << x / denom;
         std::cout << " " << y / denom;
         std::cout << " " << z / denom;
@@ -120,12 +120,12 @@ public:
 
 int main() {
 
-   // Vec v3();
+    Vec v3();
     Vec ve3d(1, 2, 3);
     Vec v2d(4, 5);
     Vec ve3d2(6, 7, 8);
 
-
+    ve3d.Normalize();
     ////////////Distance///////////////
     ve3d.DistanceTo(&ve3d2);
 
